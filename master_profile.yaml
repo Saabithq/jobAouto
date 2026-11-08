@@ -1,0 +1,172 @@
+# MASTER PROFILE - single source of truth for all CVs
+# Rule: the CV generator may ONLY use text from this file.
+# Fix anything that is not true BEFORE using it. Search for TODO.
+# Tags: windows, infra, linux, devops, cloud, ai, trainer, embedded, support
+
+personal:
+  name: "SAABITH K"
+  email: "saabithrr@gmail.com"
+  phone: "+91 8590975481"
+  location: "Kerala, India"
+  linkedin: "linkedin.com/in/saabithk"
+  github: "github.com/Saabithq"
+  portfolio: "saabithq.github.io/skportfolio"
+
+preferences:
+  locations: [Kochi, Kerala, Bangalore, Hyderabad, Chennai, "Remote (India)", "Anywhere eligible"]
+  min_match_score: 65          # skip jobs scoring below this
+  salary_expectation: "Above 6 LPA"   # minimum cutoff; jobs that state a lower salary are skipped
+  min_salary_lpa: 6
+  notice_period: "45 days (negotiable)"
+
+# Headlines used at the top of each role-family CV
+headlines:
+  infra: "System Engineer | Windows & Infrastructure Support"
+  devops: "System Engineer | Cloud & DevOps (AWS, Terraform, Docker)"
+  ai: "Python & GenAI Developer | RAG Systems"
+  trainer: "Technical Trainer | Linux, Cloud & DevOps"
+  embedded: "System Engineer | Debugging & Automation"
+
+# Honest experience summary. Use this wording; do not inflate.
+experience_summary: "3+ years of IT experience, including 1+ year as System Engineer"
+
+skills:
+  # level: core = used daily at work, working = used in projects/internship, learning = in progress
+  core:
+    windows: [Windows, Windows Server, Active Directory, Group Policy, SCCM, OUs, Patch Management]
+    networking: [TCP/IP, DNS, DHCP, VPN, VLAN, LAN/WAN]
+    support: [ITSM, Incident Management, SLA Management, Remote Support, Asset Management]
+    security: [SentinelOne, Endpoint Security]
+    virtualization: [VMware, Citrix, Amazon WorkSpaces]
+  working:
+    linux: ["Linux (Ubuntu, RHEL, CentOS)", Bash]
+    cloud: ["AWS (EC2, S3, IAM, VPC, Lambda, CloudWatch)"]
+    devops: [Terraform, Ansible, Docker, Kubernetes, Jenkins, GitLab CI/CD, GitHub Actions, Git]
+    monitoring: [Prometheus, Grafana, ELK Stack]
+    programming: [Python, SQL, JavaScript, C (fundamentals), Java]
+    ai: [RAG, LLM Integration, Embeddings, Semantic Search, FAISS, ChromaDB, Flask, Streamlit, Gemini API, LLaMA]
+  learning:
+    - "AWS Cloud Practitioner (preparing)"
+    - "IBM Generative AI Engineering Professional Certificate (2 of 16 courses done)"
+    - "Kubernetes administration (preparing)"
+  # TODO: confirm every item above is something you can discuss in an interview.
+
+experience:
+  - id: sutherland
+    title: "System Engineer"
+    company: "Sutherland Global, Kochi, Kerala"
+    dates: "Sep 2025 - Present"
+    bullets:
+      - {tags: [windows, infra, support], text: "Provide enterprise IT support for Windows-based systems, users, applications and workstation infrastructure."}
+      - {tags: [windows, infra], text: "Perform user administration using Active Directory and support OU and Group Policy administration."}
+      - {tags: [windows, infra, embedded], text: "Troubleshoot Windows OS, performance, application and end-user incidents, analysing logs to find root causes."}
+      - {tags: [infra, support], text: "Troubleshoot network connectivity involving LAN, Wi-Fi, VPN, DNS, DHCP and VLAN."}
+      - {tags: [support, infra], text: "Manage incidents and service requests through ITSM processes while meeting SLAs."}
+      - {tags: [infra, support], text: "Provide remote technical support to users using remote access tools."}
+      - {tags: [windows, infra], text: "Install, configure and upgrade Windows operating systems and enterprise applications; perform patching and maintenance."}
+      - {tags: [infra, security], text: "Support endpoint security operations and security-related troubleshooting using SentinelOne."}
+      - {tags: [infra, cloud], text: "Assist with virtualization and remote workspace environments including VMware, Citrix and Amazon WorkSpaces."}
+      - {tags: [infra, support], text: "Coordinate hardware repairs, warranty services and vendors; maintain IT asset records."}
+      - {tags: [linux, infra], text: "Occasional work with Linux systems alongside the Windows environment."}
+      - {tags: [infra, ai], text: "Document technical procedures and incident resolutions."}
+      - {tags: [support, infra, windows], text: "Resolve 50+ incidents and service requests per week, meeting and exceeding the team's weekly resolution target."}
+      # TODO: optionally add SLA % or users supported if you can back it up.
+
+  - id: techmindz
+    title: "DevOps Intern"
+    company: "Techmindz, Kochi, Kerala"
+    dates: "Jan 2024 - Jun 2024 (Part-time, Remote/Weekends)"   # overlap with lab job explained on the CV itself
+    bullets:
+      - {tags: [devops, cloud], text: "Provisioned AWS infrastructure using Terraform."}
+      - {tags: [devops], text: "Assisted in building CI/CD pipelines using Jenkins and GitLab CI/CD."}
+      - {tags: [devops], text: "Worked with Docker containers and Kubernetes deployments."}
+      - {tags: [devops, infra], text: "Assisted with monitoring using Prometheus and Grafana."}
+      - {tags: [devops, linux, embedded], text: "Wrote Bash and Python scripts for deployment automation."}
+
+  - id: mea
+    title: "Computer Science Lab Instructor"
+    company: "MEA Engineering College, Perinthalmanna, Kerala"
+    dates: "Feb 2023 - Sep 2025"
+    bullets:
+      - {tags: [linux, infra, trainer], text: "Managed Linux laboratory systems, software environments and virtual machines."}
+      - {tags: [trainer], text: "Delivered practical training on Linux, networking, programming and DevOps fundamentals to B.Tech students."}
+      - {tags: [trainer, ai], text: "Delivered sessions on Python, ML fundamentals and databases; mentored student projects."}
+      - {tags: [devops, linux], text: "Automated administrative tasks using Bash scripting and Ansible."}
+      - {tags: [trainer, support], text: "Helped students troubleshoot operating system, networking and software configuration issues."}
+      - {tags: [trainer, linux], text: "Trained approximately 900 B.Tech students across 6 semesters in hands-on computer lab sessions."}
+
+projects:
+  - id: terraform_aws
+    name: "AWS Infrastructure Provisioning using Terraform"
+    tags: [devops, cloud]
+    bullets:
+      - "Provisioned EC2, S3, IAM and VPC resources using Terraform."
+      - "Created reusable Terraform modules for repeatable deployments."
+    link: TODO
+  - id: cicd
+    name: "CI/CD Pipeline Implementation"
+    tags: [devops]
+    bullets:
+      - "Built Jenkins and GitLab CI/CD pipelines automating build, test and deployment."
+    link: TODO
+  - id: monitoring
+    name: "Monitoring Setup using Prometheus and Grafana"
+    tags: [devops, infra]
+    bullets:
+      - "Built Grafana dashboards and alerts for server performance and health."
+    link: TODO
+  - id: rag_tutor
+    name: "Learn With AI - Strict RAG-Based Syllabus-Aligned Tutor"
+    tags: [ai, devops]
+    bullets:
+      - "Built a RAG tutor using Python, Flask/Streamlit, LLaMA-3 and Gemini API."
+      - "Used FAISS/ChromaDB vector retrieval with strict similarity thresholds to reduce hallucination."
+      - "Designed deterministic refusal for out-of-syllabus queries and citation-based answers."
+    link: "https://github.com/Saabithq/UniversityAssistAI"
+  - id: finance_tracker
+    name: "AI Finance Tracker"
+    tags: [ai]
+    bullets:
+      - "Built an AI-powered personal finance tracker using Python, Flask and vector-based search to analyze spending and predict future expenses."
+    link: "https://github.com/Saabithq/AI-projects/tree/main/AI_FinanceTracker"
+  - id: bottle_detection
+    name: "Water Bottle Detection using AI"
+    tags: [ai]
+    bullets:
+      - "Built a Python-based AI model that inspects water bottles and classifies them as good, cracked or missing neck."
+      - "TODO: optionally add the library or model used (e.g. OpenCV, TensorFlow, YOLO) if you remember."
+    link: "https://github.com/Saabithq/AI-projects/tree/main/WhaterbottleDettectionUsingAI"
+  - id: emotion_detection
+    name: "Emotion Detection using AI (IBM Generative AI Engineering course project)"
+    tags: [ai]
+    bullets:
+      - "Built a Flask web application that detects emotions (anger, disgust, fear, joy, sadness) and the dominant emotion from user text using the IBM Watson Emotion Detection API."
+      - "Implemented error handling for blank input and API 400 responses, with unit tests written using Python's unittest framework."
+      - "Packaged the detector as a reusable Python module with a Requests-based API client and an HTML/CSS/JavaScript front end."
+    link: "https://github.com/Saabithq/oaqjp-final-project-emb-ai"
+  # Removed until real and linkable on GitHub: "Python Automation Toolkit",
+  # "Networking & System Lab Setup". Add them back with links if they exist.
+
+education:
+  - {degree: "Master of Computer Applications (MCA)", school: "IGNOU", dates: "2025 - Present (pursuing)"}
+  - {degree: "Bachelor of Computer Applications (BCA)", school: "University of Calicut, Kerala", dates: "2018 - 2021"}
+
+certifications:
+  - "IBM Generative AI Engineering Professional Certificate (in progress)"
+  - "DevOps and Cloud Computing Training - Techmindz"
+  - "AWS Cloud Practitioner (preparing)"
+
+publication:
+  title: "A Strict RAG-Based Syllabus-Aligned Tutor for Zero-Hallucination University Learning"
+  status: "Accepted (not published)"
+  venue: "7th International Conference on Artificial Intelligence in Education Technology (AIET 2026), Zagreb, Croatia"
+  # ACT 2026 is deliberately not listed (same paper, one venue only on CVs).
+  # Do not write "oral presentation" unless you actually present.
+
+# Which projects/skills each CV family should favour (generator reads this)
+role_families:
+  infra:    {lead_tags: [windows, infra, support], projects: [monitoring]}
+  devops:   {lead_tags: [devops, cloud, linux],    projects: [terraform_aws, cicd, monitoring]}
+  ai:       {lead_tags: [ai, trainer],             projects: [rag_tutor, finance_tracker, bottle_detection, emotion_detection]}
+  trainer:  {lead_tags: [trainer, linux],          projects: [terraform_aws, rag_tutor]}
+  embedded: {lead_tags: [embedded, linux],         projects: []}
