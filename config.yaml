@@ -1,0 +1,21 @@
+llm:
+  model: gemini-flash-latest      # check the current free model name in Google AI Studio
+  delay_seconds: 8                # pause between calls to stay inside free-tier limits
+  max_jobs_per_run: 25            # LLM calls are the limit, so we cap jobs scored per day
+search:
+  queries:
+    - system engineer
+    - windows system administrator
+    - it infrastructure engineer
+    - technical support engineer
+    - cloud support engineer
+    - devops engineer
+    - linux administrator
+    - technical trainer
+    - generative ai engineer
+    - python developer
+  locations: [Kochi, Bangalore, Hyderabad, Chennai, India]
+  max_age_days: 7
+  min_score: 65
+  exclude_title_words: [senior, sr., lead, principal, head, manager, architect, director, vp, intern]
+  remote_ok: true
