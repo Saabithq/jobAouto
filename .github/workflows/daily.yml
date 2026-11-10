@@ -1,37 +1,48 @@
+
 name: daily-job-run
+
 on:
   schedule:
-    - cron: "30 2 * * *"      # 02:30 UTC = 08:00 IST
+    - cron: "30 2 * * *"  # 02:30 UTC = 08:00 IST
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   run:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: Install LaTeX
-        run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-latex-extra poppler-utils
-      - run: pip install -r requirements.txt
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-recommended texlive-latex-extra poppler-utils
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Run job pipeline
         run: python main.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
-<<<<<<< HEAD
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-=======
->>>>>>> d6961b08659dc9ff42c2884afa5a041a1de29834
+
       - uses: actions/upload-artifact@v4
         with:
           name: cvs-${{ github.run_number }}
           path: output/
           retention-days: 14
+
       - name: Save tracker and digest
         run: |
           git config user.name "jobbot"
