@@ -22,8 +22,11 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+<<<<<<< HEAD
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+=======
+>>>>>>> d6961b08659dc9ff42c2884afa5a041a1de29834
       - uses: actions/upload-artifact@v4
         with:
           name: cvs-${{ github.run_number }}

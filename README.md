@@ -9,12 +9,17 @@ builds a tailored 1-page CV (PDF) + cover note for good matches -> you review an
 3. Get free Adzuna keys: developer.adzuna.com -> register -> app id + app key.
 4. Repo -> Settings -> Secrets and variables -> Actions -> add three secrets:
    `GEMINI_API_KEY`, `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`
+<<<<<<< HEAD
 5. Gmail notification: turn on 2-Step Verification on your Google account, then open
    myaccount.google.com/apppasswords, create an app password (16 characters) and add two more secrets:
    `GMAIL_USER` (saabithrr@gmail.com) and `GMAIL_APP_PASSWORD`. The email goes to yourself, so it should not land in spam.
    Optional secret `NOTIFY_TO` sends it to a different address.
 6. Actions tab -> "daily-job-run" -> Run workflow (first test). Then it runs every day at 8:00 AM IST.
 7. Each day your inbox gets the digest with CVs attached. You can also open `output/<date>/digest.md` in the repo (job link, score, missing skills, cover note)
+=======
+5. Actions tab -> "daily-job-run" -> Run workflow (first test). Then it runs every day at 8:00 AM IST.
+6. Each day: open `output/<date>/digest.md` in the repo (job link, score, missing skills, cover note)
+>>>>>>> d6961b08659dc9ff42c2884afa5a041a1de29834
    and download the CVs from the run's Artifacts. Set `status` / `date_applied` in `tracker.csv`.
 
 ## Things to know

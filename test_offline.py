@@ -26,6 +26,7 @@ cfg = yaml.safe_load(open("config.yaml")); cfg["llm"]["delay_seconds"] = 0
 import time; time.sleep = lambda s: None
 main.main()
 print(open("tracker.csv").read())
+<<<<<<< HEAD
 
 # --- email test with fake SMTP (no network) ---
 import smtplib, notify
@@ -42,3 +43,5 @@ shutil.rmtree("output", ignore_errors=True); os.remove("tracker.csv")
 main.main()
 m = sent["msg"]
 print("EMAIL:", m["Subject"], "| attachments:", [p.get_filename() for p in m.iter_attachments()], "| pw:", sent["login"][1])
+=======
+>>>>>>> d6961b08659dc9ff42c2884afa5a041a1de29834
